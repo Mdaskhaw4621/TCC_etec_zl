@@ -1,0 +1,55 @@
+C:\Users\Moises\Documents\Volta\Volta\bin\Debug\Volta.exe
+C:\Users\Moises\Documents\Volta\Volta\bin\Debug\Volta.pdb
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmInfo_Sistema.resources
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmPrincipal.resources
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmStatus.resources
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\Volta.csproj.GenerateResource.Cache
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\Volta.exe
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\Volta.pdb
+C:\Users\Moises\Documents\Volta\Volta\bin\Debug\MetroFramework.dll
+C:\Users\Moises\Documents\Volta\Volta\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Moises\Documents\Volta\Volta\obj\x86\Debug\Volta.csprojResolveAssemblyReference.cache
+H:\Volta\Volta\obj\x86\Debug\Volta.exe
+H:\Volta\Volta\obj\x86\Debug\Volta.pdb
+H:\Volta\Volta\bin\Debug\Volta.exe
+H:\Volta\Volta\bin\Debug\Volta.pdb
+H:\Volta\Volta\obj\x86\Debug\Volta.csprojResolveAssemblyReference.cache
+H:\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmInfo_Sistema.resources
+H:\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmPrincipal.resources
+H:\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmStatus.resources
+H:\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+H:\Volta\Volta\obj\x86\Debug\Volta.csproj.GenerateResource.Cache
+G:\Volta - Cópia\Volta\obj\x86\Debug\Volta.exe
+G:\Volta - Cópia\Volta\obj\x86\Debug\Volta.pdb
+H:\Volta - Cópia\Volta\obj\x86\Debug\Volta.exe
+H:\Volta - Cópia\Volta\obj\x86\Debug\Volta.pdb
+H:\Volta - Cópia\Volta\bin\Debug\Volta.exe
+H:\Volta - Cópia\Volta\bin\Debug\Volta.pdb
+H:\Volta - Cópia\Volta\obj\x86\Debug\Volta.csprojResolveAssemblyReference.cache
+H:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmInfo_Sistema.resources
+H:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmPrincipal.resources
+H:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmStatus.resources
+H:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+H:\Volta - Cópia\Volta\obj\x86\Debug\Volta.csproj.GenerateResource.Cache
+G:\Volta - Cópia\Volta\bin\Debug\Volta.exe
+G:\Volta - Cópia\Volta\bin\Debug\Volta.pdb
+G:\Volta - Cópia\Volta\obj\x86\Debug\Volta.csprojResolveAssemblyReference.cache
+G:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmInfo_Sistema.resources
+G:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmPrincipal.resources
+G:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmStatus.resources
+G:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+G:\Volta - Cópia\Volta\obj\x86\Debug\Volta.csproj.GenerateResource.Cache
+D:\Volta - Cópia\Volta\obj\x86\Debug\Volta.exe
+D:\Volta - Cópia\Volta\obj\x86\Debug\Volta.pdb
+D:\Volta - Cópia\Volta\obj\x86\Debug\Volta.csprojResolveAssemblyReference.cache
+D:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmInfo_Sistema.resources
+D:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmPrincipal.resources
+D:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frmStatus.resources
+D:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Volta - Cópia\Volta\obj\x86\Debug\Volta.csproj.GenerateResource.Cache
+D:\Volta - Cópia\Volta\bin\Debug\Volta.exe
+D:\Volta - Cópia\Volta\bin\Debug\Volta.pdb
+D:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frm_Monit_MemProcess.resources
+H:\Volta - Cópia\Volta\bin\Debug\MetroFramework.dll
+H:\Volta - Cópia\Volta\bin\Debug\MetroFramework.Fonts.dll
