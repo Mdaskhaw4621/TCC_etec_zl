@@ -53,3 +53,23 @@ D:\Volta - Cópia\Volta\bin\Debug\Volta.pdb
 D:\Volta - Cópia\Volta\obj\x86\Debug\WindowsFormsApplication1.frm_Monit_MemProcess.resources
 H:\Volta - Cópia\Volta\bin\Debug\MetroFramework.dll
 H:\Volta - Cópia\Volta\bin\Debug\MetroFramework.Fonts.dll
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.exe
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.pdb
+D:\TCC_Gitado\Volta\Volta\bin\Debug\Volta.exe
+D:\TCC_Gitado\Volta\Volta\bin\Debug\Volta.pdb
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.csprojResolveAssemblyReference.cache
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmInfo_Sistema.resources
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmPrincipal.resources
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmStatus.resources
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.csproj.GenerateResource.Cache
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.exe
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.pdb
+H:\TCC_Gitado\Volta\Volta\bin\Debug\Volta.exe
+H:\TCC_Gitado\Volta\Volta\bin\Debug\Volta.pdb
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.csprojResolveAssemblyReference.cache
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmInfo_Sistema.resources
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmPrincipal.resources
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.frmStatus.resources
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+H:\TCC_Gitado\Volta\Volta\obj\x86\Debug\Volta.csproj.GenerateResource.Cache

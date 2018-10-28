@@ -68,44 +68,80 @@ namespace WindowsFormsApplication1
                     lbl_numSerie_CPU.Text = "Número de Série: " + Info_Processador.getNumSerial_CPU();
                     lbl_l2Cache_CPU.Text = "Cache L2: " + Info_Processador.getCacheSizeL2_CPU() + " MB";
                     lbl_l3Cache_CPU.Text = "Cache L3: " + Info_Processador.getCacheSizeL3_CPU() + " MB";
-                    
-       
+
+                    lbl_NomePC_SO.Text = "Nome do Computador: " + Info_SO.getNome_PC();
+                    lbl_NomeSO_SO.Text = "Nome do SO: " + Info_SO.getNome_SO();
+                    //lbl_ID_SO.Text = "ID do Produto: " + Info_SO.getID_produto_SO();
+                    lbl_VersaoSO_SO.Text = "Versão do SO: " + Info_SO.getVersao_SO();
             
         
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
+            //CPU e Memoria Use
             Computer computer = new Computer();
             
-            double RAM_Used = ((computer.Info.TotalPhysicalMemory) - (computer.Info.AvailablePhysicalMemory));
+            decimal RAM_Used = ((computer.Info.TotalPhysicalMemory) - (computer.Info.AvailablePhysicalMemory));
             int percent_RAM = Convert.ToInt32(RAM_Used * 100 / computer.Info.TotalPhysicalMemory);
 
 
             metroProgressSpinner_RAM.Value = percent_RAM;
             lblRAM_use_view.Text = "RAM: " + percent_RAM + " %";
 
-            int CPU_Use = metroProgressSpinner_CPU.Value;
-            metroProgressSpinner_CPU.Value = (int)CPU.NextValue();
-            lblCPU_use_view.Text = "CPU: " + CPU_Use.ToString() + " %";
-
-            if (percent_RAM >= 80)
+            if (percent_RAM >= 75)
             {
                 metroProgressSpinner_RAM.Style = MetroFramework.MetroColorStyle.Red;
             }
-            else
-            {
-                metroProgressSpinner_RAM.Style = MetroFramework.MetroColorStyle.Default;
-            }
 
-            if(CPU_Use >= 90)
+            double CPU_use =  CPU.NextValue();
+            lblCPU_use_view.Text = "CPU: " + Convert.ToInt32(CPU_use).ToString() + " %";
+
+            if (CPU_use >= 99.0)
             {
-                metroProgressSpinner_RAM.Style = MetroFramework.MetroColorStyle.Red;
+                metroProgressSpinner_CPU.Value = 100;
+                metroProgressSpinner_CPU.Style = MetroFramework.MetroColorStyle.Red;
+                
+
+            }
+            else if (CPU_use < 1.0) {
+                metroProgressSpinner_CPU.Value = (int)  Math.Round(CPU_use);
             }
             else
             {
-                metroProgressSpinner_RAM.Style = MetroFramework.MetroColorStyle.Default;
+                metroProgressSpinner_CPU.Value = (int) CPU_use;
+              
+                if(CPU_use >= 90.0)
+                {
+                    metroProgressSpinner_CPU.Style = MetroFramework.MetroColorStyle.Red;
+                }   
             }
-        } 
+                      
+
+            //Hard Disk Use
+
+            double HD_use = HD.NextValue();
+
+            lblHD_use_view.Text = "HD: " + Convert.ToInt32(HD_use).ToString() + " %";
+            
+            if (HD_use >= 99.0)
+            {
+                metroProgressSpinner_HD.Value = 100;
+                metroProgressSpinner_HD.Style = MetroFramework.MetroColorStyle.Red;
+            }
+            else if (HD_use < 1.0)
+            {
+                metroProgressSpinner_HD.Value = (int) Math.Round(HD_use);
+            }
+            else
+            {
+                metroProgressSpinner_HD.Value = (int) HD_use;
+                if (HD_use >= 90.0)
+                {
+                    metroProgressSpinner_HD.Style = MetroFramework.MetroColorStyle.Red;
+                }   
+            }
+        }       
     }
 }

@@ -33,8 +33,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblHD_use_view = new System.Windows.Forms.Label();
             this.metroProgressSpinner3 = new MetroFramework.Controls.MetroProgressSpinner();
-            this.metroProgressSpinner2 = new MetroFramework.Controls.MetroProgressSpinner();
+            this.metroProgressSpinner_HD = new MetroFramework.Controls.MetroProgressSpinner();
             this.lblRAM_use_view = new System.Windows.Forms.Label();
             this.lblCPU_use_view = new System.Windows.Forms.Label();
             this.metroProgressSpinner_CPU = new MetroFramework.Controls.MetroProgressSpinner();
@@ -49,15 +50,6 @@
             this.lbl_CPU_view = new System.Windows.Forms.Label();
             this.lbl_SO_view = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lbl_l3Cache_CPU = new System.Windows.Forms.Label();
             this.lbl_l2Cache_CPU = new System.Windows.Forms.Label();
@@ -69,10 +61,10 @@
             this.lbl_Num_PL_CPU = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_ID_SO = new System.Windows.Forms.Label();
+            this.lbl_VersaoSO_SO = new System.Windows.Forms.Label();
+            this.lbl_NomePC_SO = new System.Windows.Forms.Label();
+            this.lbl_NomeSO_SO = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lbl_MB_dtBIOS = new System.Windows.Forms.Label();
             this.lbl_MB_verBIOS = new System.Windows.Forms.Label();
@@ -86,13 +78,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CPU = new System.Diagnostics.PerformanceCounter();
+            this.HD = new System.Diagnostics.PerformanceCounter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -100,6 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HD)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -110,7 +103,7 @@
             this.tabControl1.Location = new System.Drawing.Point(-2, 97);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(666, 373);
+            this.tabControl1.Size = new System.Drawing.Size(666, 501);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -123,24 +116,34 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(658, 347);
+            this.tabPage1.Size = new System.Drawing.Size(658, 475);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Visão Geral";
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.lblHD_use_view);
             this.groupBox7.Controls.Add(this.metroProgressSpinner3);
-            this.groupBox7.Controls.Add(this.metroProgressSpinner2);
+            this.groupBox7.Controls.Add(this.metroProgressSpinner_HD);
             this.groupBox7.Controls.Add(this.lblRAM_use_view);
             this.groupBox7.Controls.Add(this.lblCPU_use_view);
             this.groupBox7.Controls.Add(this.metroProgressSpinner_CPU);
             this.groupBox7.Controls.Add(this.metroProgressSpinner_RAM);
             this.groupBox7.Location = new System.Drawing.Point(6, 283);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(629, 191);
+            this.groupBox7.Size = new System.Drawing.Size(629, 192);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Desempenho";
+            // 
+            // lblHD_use_view
+            // 
+            this.lblHD_use_view.AutoSize = true;
+            this.lblHD_use_view.Location = new System.Drawing.Point(371, 99);
+            this.lblHD_use_view.Name = "lblHD_use_view";
+            this.lblHD_use_view.Size = new System.Drawing.Size(23, 13);
+            this.lblHD_use_view.TabIndex = 15;
+            this.lblHD_use_view.Text = "HD";
             // 
             // metroProgressSpinner3
             // 
@@ -154,17 +157,17 @@
             this.metroProgressSpinner3.UseSelectable = true;
             this.metroProgressSpinner3.Value = 100;
             // 
-            // metroProgressSpinner2
+            // metroProgressSpinner_HD
             // 
-            this.metroProgressSpinner2.EnsureVisible = false;
-            this.metroProgressSpinner2.Location = new System.Drawing.Point(326, 37);
-            this.metroProgressSpinner2.Maximum = 100;
-            this.metroProgressSpinner2.Name = "metroProgressSpinner2";
-            this.metroProgressSpinner2.Size = new System.Drawing.Size(135, 135);
-            this.metroProgressSpinner2.Spinning = false;
-            this.metroProgressSpinner2.TabIndex = 13;
-            this.metroProgressSpinner2.UseSelectable = true;
-            this.metroProgressSpinner2.Value = 100;
+            this.metroProgressSpinner_HD.EnsureVisible = false;
+            this.metroProgressSpinner_HD.Location = new System.Drawing.Point(326, 37);
+            this.metroProgressSpinner_HD.Maximum = 100;
+            this.metroProgressSpinner_HD.Name = "metroProgressSpinner_HD";
+            this.metroProgressSpinner_HD.Size = new System.Drawing.Size(135, 135);
+            this.metroProgressSpinner_HD.Spinning = false;
+            this.metroProgressSpinner_HD.TabIndex = 13;
+            this.metroProgressSpinner_HD.UseSelectable = true;
+            this.metroProgressSpinner_HD.Value = 100;
             // 
             // lblRAM_use_view
             // 
@@ -203,6 +206,7 @@
             this.metroProgressSpinner_RAM.Maximum = 100;
             this.metroProgressSpinner_RAM.Name = "metroProgressSpinner_RAM";
             this.metroProgressSpinner_RAM.Size = new System.Drawing.Size(135, 135);
+            this.metroProgressSpinner_RAM.Speed = 0.5F;
             this.metroProgressSpinner_RAM.Spinning = false;
             this.metroProgressSpinner_RAM.TabIndex = 12;
             this.metroProgressSpinner_RAM.UseSelectable = true;
@@ -299,104 +303,14 @@
             // tabPage3
             // 
             this.tabPage3.AutoScroll = true;
-            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(658, 347);
+            this.tabPage3.Size = new System.Drawing.Size(658, 475);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Processador & Memória";
+            this.tabPage3.Text = "Processador";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label2);
-            this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.label10);
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.label13);
-            this.groupBox6.Location = new System.Drawing.Point(6, 277);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(629, 265);
-            this.groupBox6.TabIndex = 8;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Memória";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 196);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "L3 Cache:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "L2 Cache:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Número de Série:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 148);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Velocidade Atual do Clock:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(35, 125);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 13);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Velocidade Máxima  do Clock:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(35, 80);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Fabricante:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(35, 33);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Processador:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(35, 56);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Processadores Lógicos:";
             // 
             // groupBox5
             // 
@@ -410,7 +324,7 @@
             this.groupBox5.Controls.Add(this.lbl_Num_PL_CPU);
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(629, 265);
+            this.groupBox5.Size = new System.Drawing.Size(629, 248);
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Processador";
@@ -497,16 +411,16 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.tabPage2.Size = new System.Drawing.Size(658, 347);
+            this.tabPage2.Size = new System.Drawing.Size(658, 475);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "S.O & Placa Mãe";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.lbl_ID_SO);
+            this.groupBox4.Controls.Add(this.lbl_VersaoSO_SO);
+            this.groupBox4.Controls.Add(this.lbl_NomePC_SO);
+            this.groupBox4.Controls.Add(this.lbl_NomeSO_SO);
             this.groupBox4.Location = new System.Drawing.Point(6, 238);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(629, 142);
@@ -514,41 +428,41 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Sistema Operacional";
             // 
-            // label5
+            // lbl_ID_SO
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 104);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "ID do Produto:";
+            this.lbl_ID_SO.AutoSize = true;
+            this.lbl_ID_SO.Location = new System.Drawing.Point(35, 104);
+            this.lbl_ID_SO.Name = "lbl_ID_SO";
+            this.lbl_ID_SO.Size = new System.Drawing.Size(76, 13);
+            this.lbl_ID_SO.TabIndex = 3;
+            this.lbl_ID_SO.Text = "ID do Produto:";
             // 
-            // label6
+            // lbl_VersaoSO_SO
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 79);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Versão do SO:";
+            this.lbl_VersaoSO_SO.AutoSize = true;
+            this.lbl_VersaoSO_SO.Location = new System.Drawing.Point(35, 79);
+            this.lbl_VersaoSO_SO.Name = "lbl_VersaoSO_SO";
+            this.lbl_VersaoSO_SO.Size = new System.Drawing.Size(76, 13);
+            this.lbl_VersaoSO_SO.TabIndex = 2;
+            this.lbl_VersaoSO_SO.Text = "Versão do SO:";
             // 
-            // label7
+            // lbl_NomePC_SO
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(35, 33);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Nome do Computador:";
+            this.lbl_NomePC_SO.AutoSize = true;
+            this.lbl_NomePC_SO.Location = new System.Drawing.Point(35, 33);
+            this.lbl_NomePC_SO.Name = "lbl_NomePC_SO";
+            this.lbl_NomePC_SO.Size = new System.Drawing.Size(113, 13);
+            this.lbl_NomePC_SO.TabIndex = 1;
+            this.lbl_NomePC_SO.Text = "Nome do Computador:";
             // 
-            // label8
+            // lbl_NomeSO_SO
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 55);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Nome do SO: ";
+            this.lbl_NomeSO_SO.AutoSize = true;
+            this.lbl_NomeSO_SO.Location = new System.Drawing.Point(35, 55);
+            this.lbl_NomeSO_SO.Name = "lbl_NomeSO_SO";
+            this.lbl_NomeSO_SO.Size = new System.Drawing.Size(74, 13);
+            this.lbl_NomeSO_SO.TabIndex = 0;
+            this.lbl_NomeSO_SO.Text = "Nome do SO: ";
             // 
             // groupBox3
             // 
@@ -664,7 +578,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 985;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // CPU
@@ -673,11 +587,17 @@
             this.CPU.CounterName = "% Processor Utility";
             this.CPU.InstanceName = "_Total";
             // 
+            // HD
+            // 
+            this.HD.CategoryName = "PhysicalDisk";
+            this.HD.CounterName = "% Disk Time";
+            this.HD.InstanceName = "_Total";
+            // 
             // frmInfo_Sistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 473);
+            this.ClientSize = new System.Drawing.Size(665, 599);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -694,8 +614,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -707,6 +625,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -737,10 +656,10 @@
         private System.Windows.Forms.Label lbl_MB_nomeBIOS;
         private System.Windows.Forms.Label lbl_MB_dtBIOS;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbl_ID_SO;
+        private System.Windows.Forms.Label lbl_VersaoSO_SO;
+        private System.Windows.Forms.Label lbl_NomePC_SO;
+        private System.Windows.Forms.Label lbl_NomeSO_SO;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label lbl_numSerie_CPU;
@@ -751,24 +670,17 @@
         private System.Windows.Forms.Label lbl_Num_PL_CPU;
         private System.Windows.Forms.Label lbl_l3Cache_CPU;
         private System.Windows.Forms.Label lbl_l2Cache_CPU;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblRAM_use_view;
         private System.Windows.Forms.Label lblCPU_use_view;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner_CPU;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner3;
-        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner2;
-        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner_RAM;
+        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner_HD;
         private System.Diagnostics.PerformanceCounter CPU;
+        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner_RAM;
+        private System.Diagnostics.PerformanceCounter HD;
+        private System.Windows.Forms.Label lblHD_use_view;
 
 
     }

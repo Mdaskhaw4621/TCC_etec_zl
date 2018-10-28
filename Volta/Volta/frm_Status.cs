@@ -9,11 +9,22 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmStatus : Form
+    public partial class frm_Status : Form
     {
-        public frmStatus()
+        public frm_Status()
         {
             InitializeComponent();
         }
+
+        private void frm_Status_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+       
+
+
+        
     }
 }
