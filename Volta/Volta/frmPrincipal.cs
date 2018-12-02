@@ -18,13 +18,18 @@ namespace WindowsFormsApplication1
 
         private void btn_sistema_info_Click(object sender, EventArgs e)
         {
-            frmInfo_Sistema frm_info_sist = new frmInfo_Sistema();
-            frm_info_sist.Show();
+            /*frm_Aguarde frm_aguarde = new frm_Aguarde();
+            frm_aguarde.Show();*/
+
+            frmInfo_Sistema frm_sis_inf = new frmInfo_Sistema();
+            frm_sis_inf.Show();
+
+            
         }
 
         private void btn_status_Click(object sender, EventArgs e)
-        {
-            frmStatus frm_status = new frmStatus();
+        {           
+            frm_Status frm_status = new frm_Status();
             frm_status.Show();
         }       
     }

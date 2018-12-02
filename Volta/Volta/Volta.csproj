@@ -39,7 +39,7 @@
       <HintPath>..\..\Volta - Coisas para criar\MetroUIFramework(www.tutorialson.net)\Metro UI Framework\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Design">
-      <HintPath>..\..\..\Volta - Coisas para criar\MetroUIFramework(www.tutorialson.net)\Metro UI Framework\MetroFramework.Design.dll</HintPath>
+      <HintPath>H:\Volta - Coisas para criar\MetroUIFramework(www.tutorialson.net)\Metro UI Framework\MetroFramework.Design.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -59,6 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conectar.cs" />
+    <Compile Include="Conexao.cs" />
     <Compile Include="frmInfo_Sistema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +72,18 @@
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Aguarde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Aguarde.Designer.cs">
+      <DependentUpon>frm_Aguarde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Conexao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Conexao.Designer.cs">
+      <DependentUpon>frm_Conexao.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Status.cs">
       <SubType>Form</SubType>
@@ -89,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Aguarde.resx">
+      <DependentUpon>frm_Aguarde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Conexao.resx">
+      <DependentUpon>frm_Conexao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Status.resx">
       <DependentUpon>frm_Status.cs</DependentUpon>
@@ -118,6 +138,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

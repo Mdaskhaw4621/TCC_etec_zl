@@ -31,10 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfo_Sistema));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage_VG = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.lblHD_use_view = new System.Windows.Forms.Label();
-            this.metroProgressSpinner3 = new MetroFramework.Controls.MetroProgressSpinner();
             this.metroProgressSpinner_HD = new MetroFramework.Controls.MetroProgressSpinner();
             this.lblRAM_use_view = new System.Windows.Forms.Label();
             this.lblCPU_use_view = new System.Windows.Forms.Label();
@@ -49,7 +48,7 @@
             this.lbl_NomeUsuario_view = new System.Windows.Forms.Label();
             this.lbl_CPU_view = new System.Windows.Forms.Label();
             this.lbl_SO_view = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage_Processador = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lbl_l3Cache_CPU = new System.Windows.Forms.Label();
             this.lbl_l2Cache_CPU = new System.Windows.Forms.Label();
@@ -59,9 +58,8 @@
             this.lbl_Fabri_CPU = new System.Windows.Forms.Label();
             this.lbl_CPU_view_TabProc = new System.Windows.Forms.Label();
             this.lbl_Num_PL_CPU = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage_SO_MB = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lbl_ID_SO = new System.Windows.Forms.Label();
             this.lbl_VersaoSO_SO = new System.Windows.Forms.Label();
             this.lbl_NomePC_SO = new System.Windows.Forms.Label();
             this.lbl_NomeSO_SO = new System.Windows.Forms.Label();
@@ -79,51 +77,52 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.CPU = new System.Diagnostics.PerformanceCounter();
             this.HD = new System.Diagnostics.PerformanceCounter();
+            this.Ethernet = new System.Diagnostics.PerformanceCounter();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage_VG.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabPage_Processador.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPage_SO_MB.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ethernet)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage_VG);
+            this.tabControl1.Controls.Add(this.tabPage_Processador);
+            this.tabControl1.Controls.Add(this.tabPage_SO_MB);
             this.tabControl1.Location = new System.Drawing.Point(-2, 97);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(666, 501);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPage_VG
             // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.groupBox7);
-            this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(658, 475);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Visão Geral";
+            this.tabPage_VG.AutoScroll = true;
+            this.tabPage_VG.BackColor = System.Drawing.Color.White;
+            this.tabPage_VG.Controls.Add(this.groupBox7);
+            this.tabPage_VG.Controls.Add(this.groupBox2);
+            this.tabPage_VG.Controls.Add(this.groupBox1);
+            this.tabPage_VG.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_VG.Name = "tabPage_VG";
+            this.tabPage_VG.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_VG.Size = new System.Drawing.Size(658, 475);
+            this.tabPage_VG.TabIndex = 0;
+            this.tabPage_VG.Text = "Visão Geral";
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.lblHD_use_view);
-            this.groupBox7.Controls.Add(this.metroProgressSpinner3);
             this.groupBox7.Controls.Add(this.metroProgressSpinner_HD);
             this.groupBox7.Controls.Add(this.lblRAM_use_view);
             this.groupBox7.Controls.Add(this.lblCPU_use_view);
@@ -139,31 +138,19 @@
             // lblHD_use_view
             // 
             this.lblHD_use_view.AutoSize = true;
-            this.lblHD_use_view.Location = new System.Drawing.Point(371, 99);
+            this.lblHD_use_view.Location = new System.Drawing.Point(487, 91);
             this.lblHD_use_view.Name = "lblHD_use_view";
             this.lblHD_use_view.Size = new System.Drawing.Size(23, 13);
             this.lblHD_use_view.TabIndex = 15;
             this.lblHD_use_view.Text = "HD";
             // 
-            // metroProgressSpinner3
-            // 
-            this.metroProgressSpinner3.EnsureVisible = false;
-            this.metroProgressSpinner3.Location = new System.Drawing.Point(476, 37);
-            this.metroProgressSpinner3.Maximum = 100;
-            this.metroProgressSpinner3.Name = "metroProgressSpinner3";
-            this.metroProgressSpinner3.Size = new System.Drawing.Size(135, 135);
-            this.metroProgressSpinner3.Spinning = false;
-            this.metroProgressSpinner3.TabIndex = 14;
-            this.metroProgressSpinner3.UseSelectable = true;
-            this.metroProgressSpinner3.Value = 100;
-            // 
             // metroProgressSpinner_HD
             // 
             this.metroProgressSpinner_HD.EnsureVisible = false;
-            this.metroProgressSpinner_HD.Location = new System.Drawing.Point(326, 37);
+            this.metroProgressSpinner_HD.Location = new System.Drawing.Point(437, 22);
             this.metroProgressSpinner_HD.Maximum = 100;
             this.metroProgressSpinner_HD.Name = "metroProgressSpinner_HD";
-            this.metroProgressSpinner_HD.Size = new System.Drawing.Size(135, 135);
+            this.metroProgressSpinner_HD.Size = new System.Drawing.Size(150, 150);
             this.metroProgressSpinner_HD.Spinning = false;
             this.metroProgressSpinner_HD.TabIndex = 13;
             this.metroProgressSpinner_HD.UseSelectable = true;
@@ -172,7 +159,7 @@
             // lblRAM_use_view
             // 
             this.lblRAM_use_view.AutoSize = true;
-            this.lblRAM_use_view.Location = new System.Drawing.Point(219, 99);
+            this.lblRAM_use_view.Location = new System.Drawing.Point(291, 91);
             this.lblRAM_use_view.Name = "lblRAM_use_view";
             this.lblRAM_use_view.Size = new System.Drawing.Size(31, 13);
             this.lblRAM_use_view.TabIndex = 9;
@@ -181,7 +168,7 @@
             // lblCPU_use_view
             // 
             this.lblCPU_use_view.AutoSize = true;
-            this.lblCPU_use_view.Location = new System.Drawing.Point(65, 99);
+            this.lblCPU_use_view.Location = new System.Drawing.Point(98, 91);
             this.lblCPU_use_view.Name = "lblCPU_use_view";
             this.lblCPU_use_view.Size = new System.Drawing.Size(29, 13);
             this.lblCPU_use_view.TabIndex = 8;
@@ -190,10 +177,10 @@
             // metroProgressSpinner_CPU
             // 
             this.metroProgressSpinner_CPU.EnsureVisible = false;
-            this.metroProgressSpinner_CPU.Location = new System.Drawing.Point(24, 37);
+            this.metroProgressSpinner_CPU.Location = new System.Drawing.Point(47, 22);
             this.metroProgressSpinner_CPU.Maximum = 100;
             this.metroProgressSpinner_CPU.Name = "metroProgressSpinner_CPU";
-            this.metroProgressSpinner_CPU.Size = new System.Drawing.Size(135, 135);
+            this.metroProgressSpinner_CPU.Size = new System.Drawing.Size(150, 150);
             this.metroProgressSpinner_CPU.Spinning = false;
             this.metroProgressSpinner_CPU.TabIndex = 11;
             this.metroProgressSpinner_CPU.UseSelectable = true;
@@ -202,10 +189,10 @@
             // metroProgressSpinner_RAM
             // 
             this.metroProgressSpinner_RAM.EnsureVisible = false;
-            this.metroProgressSpinner_RAM.Location = new System.Drawing.Point(176, 37);
+            this.metroProgressSpinner_RAM.Location = new System.Drawing.Point(241, 22);
             this.metroProgressSpinner_RAM.Maximum = 100;
             this.metroProgressSpinner_RAM.Name = "metroProgressSpinner_RAM";
-            this.metroProgressSpinner_RAM.Size = new System.Drawing.Size(135, 135);
+            this.metroProgressSpinner_RAM.Size = new System.Drawing.Size(150, 150);
             this.metroProgressSpinner_RAM.Speed = 0.5F;
             this.metroProgressSpinner_RAM.Spinning = false;
             this.metroProgressSpinner_RAM.TabIndex = 12;
@@ -300,17 +287,17 @@
             this.lbl_SO_view.TabIndex = 0;
             this.lbl_SO_view.Text = "Sistema Operacional:";
             // 
-            // tabPage3
+            // tabPage_Processador
             // 
-            this.tabPage3.AutoScroll = true;
-            this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(658, 475);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Processador";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage_Processador.AutoScroll = true;
+            this.tabPage_Processador.Controls.Add(this.groupBox5);
+            this.tabPage_Processador.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Processador.Name = "tabPage_Processador";
+            this.tabPage_Processador.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Processador.Size = new System.Drawing.Size(658, 475);
+            this.tabPage_Processador.TabIndex = 2;
+            this.tabPage_Processador.Text = "Processador";
+            this.tabPage_Processador.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -401,41 +388,31 @@
             this.lbl_Num_PL_CPU.TabIndex = 0;
             this.lbl_Num_PL_CPU.Text = "Processadores Lógicos:";
             // 
-            // tabPage2
+            // tabPage_SO_MB
             // 
-            this.tabPage2.AutoScroll = true;
-            this.tabPage2.AutoScrollMargin = new System.Drawing.Size(5, 5);
-            this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
-            this.tabPage2.Size = new System.Drawing.Size(658, 475);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "S.O & Placa Mãe";
+            this.tabPage_SO_MB.AutoScroll = true;
+            this.tabPage_SO_MB.AutoScrollMargin = new System.Drawing.Size(5, 5);
+            this.tabPage_SO_MB.BackColor = System.Drawing.Color.White;
+            this.tabPage_SO_MB.Controls.Add(this.groupBox4);
+            this.tabPage_SO_MB.Controls.Add(this.groupBox3);
+            this.tabPage_SO_MB.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_SO_MB.Name = "tabPage_SO_MB";
+            this.tabPage_SO_MB.Padding = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.tabPage_SO_MB.Size = new System.Drawing.Size(658, 475);
+            this.tabPage_SO_MB.TabIndex = 1;
+            this.tabPage_SO_MB.Text = "S.O & Placa Mãe";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lbl_ID_SO);
             this.groupBox4.Controls.Add(this.lbl_VersaoSO_SO);
             this.groupBox4.Controls.Add(this.lbl_NomePC_SO);
             this.groupBox4.Controls.Add(this.lbl_NomeSO_SO);
             this.groupBox4.Location = new System.Drawing.Point(6, 238);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(629, 142);
+            this.groupBox4.Size = new System.Drawing.Size(629, 126);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Sistema Operacional";
-            // 
-            // lbl_ID_SO
-            // 
-            this.lbl_ID_SO.AutoSize = true;
-            this.lbl_ID_SO.Location = new System.Drawing.Point(35, 104);
-            this.lbl_ID_SO.Name = "lbl_ID_SO";
-            this.lbl_ID_SO.Size = new System.Drawing.Size(76, 13);
-            this.lbl_ID_SO.TabIndex = 3;
-            this.lbl_ID_SO.Text = "ID do Produto:";
             // 
             // lbl_VersaoSO_SO
             // 
@@ -561,9 +538,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(88, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 25);
+            this.label1.Size = new System.Drawing.Size(313, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Inforções sobre seu Sistema";
+            this.label1.Text = "Informações sobre seu Sistema";
             // 
             // panel1
             // 
@@ -590,8 +567,13 @@
             // HD
             // 
             this.HD.CategoryName = "PhysicalDisk";
-            this.HD.CounterName = "% Disk Time";
+            this.HD.CounterName = "% Disk Read Time";
             this.HD.InstanceName = "_Total";
+            // 
+            // Ethernet
+            // 
+            this.Ethernet.CategoryName = "Network Adapter";
+            this.Ethernet.CounterName = "Bytes Received/sec";
             // 
             // frmInfo_Sistema
             // 
@@ -606,17 +588,17 @@
             this.Text = "Informções do Sistema";
             this.Load += new System.EventHandler(this.frmInfo_Sistema_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPage_VG.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
+            this.tabPage_Processador.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.tabPage_SO_MB.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -626,6 +608,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ethernet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -633,8 +616,8 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage_VG;
+        private System.Windows.Forms.TabPage tabPage_SO_MB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
@@ -656,11 +639,10 @@
         private System.Windows.Forms.Label lbl_MB_nomeBIOS;
         private System.Windows.Forms.Label lbl_MB_dtBIOS;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lbl_ID_SO;
         private System.Windows.Forms.Label lbl_VersaoSO_SO;
         private System.Windows.Forms.Label lbl_NomePC_SO;
         private System.Windows.Forms.Label lbl_NomeSO_SO;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage_Processador;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label lbl_numSerie_CPU;
         private System.Windows.Forms.Label lbl_speedNowClock_CPU;
@@ -675,12 +657,12 @@
         private System.Windows.Forms.Label lblRAM_use_view;
         private System.Windows.Forms.Label lblCPU_use_view;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner_CPU;
-        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner3;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner_HD;
         private System.Diagnostics.PerformanceCounter CPU;
         private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner_RAM;
         private System.Diagnostics.PerformanceCounter HD;
         private System.Windows.Forms.Label lblHD_use_view;
+        private System.Diagnostics.PerformanceCounter Ethernet;
 
 
     }

@@ -1,0 +1,7 @@
+C:\Users\Aluno\Desktop\TCC_Gitado(2)\Volta\Volta\obj\x86\Release\WindowsFormsApplication1.frmInfo_Sistema.resources
+C:\Users\Aluno\Desktop\TCC_Gitado(2)\Volta\Volta\obj\x86\Release\WindowsFormsApplication1.frmPrincipal.resources
+C:\Users\Aluno\Desktop\TCC_Gitado(2)\Volta\Volta\obj\x86\Release\WindowsFormsApplication1.frm_Aguarde.resources
+C:\Users\Aluno\Desktop\TCC_Gitado(2)\Volta\Volta\obj\x86\Release\WindowsFormsApplication1.frm_Conexao.resources
+C:\Users\Aluno\Desktop\TCC_Gitado(2)\Volta\Volta\obj\x86\Release\WindowsFormsApplication1.frm_Status.resources
+C:\Users\Aluno\Desktop\TCC_Gitado(2)\Volta\Volta\obj\x86\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Aluno\Desktop\TCC_Gitado(2)\Volta\Volta\obj\x86\Release\Volta.csproj.GenerateResource.Cache

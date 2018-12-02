@@ -38,43 +38,43 @@ namespace WindowsFormsApplication1
 
             lbl_Mem_Livre.Text = "Memória Livre (RAM): " + Info_Memoria_Armazenamento.getLivre_RAM() + " GB";
 
-
             lbl_Livre_Disc_Rig.Text = "Livre no Disco Rígido(C:): " + Info_Memoria_Armazenamento.getLivreEsp_HD() + " GB";
 
             lbl_Tot_Disc_Rig.Text = "Total no Disco Rígido(C:): " + Info_Memoria_Armazenamento.getTotalEsp_HD() + " GB";
-            
-            
-            //TabPane Placa Mãe
 
-           
-                    lbl_MB_modelo.Text = "Modelo: " + Info_PlacaMae.getModelo_MB();
-                    lbl_MB_fabricante.Text = "Fabricante: " + Info_PlacaMae.getFabricante_MB();
-                    lbl_MB_numSerie.Text = "Número de Série: " + Info_PlacaMae.getSerialNum_MB();
-
-                    lbl_MB_fornBIOS.Text = "Fornecedor da BIOS: " + Info_BIOS.getFornecedorBIOS();
-                    lbl_MB_nomeBIOS.Text = "Nome da BIOS: " + Info_BIOS.getNomeBIOS();
-                    lbl_MB_verBIOS.Text = "Versão da BIOS: " + Info_BIOS.getVersaoBIOS();
-                    lbl_MB_dtBIOS.Text = "Data da BIOS: " + Info_BIOS.getDataBIOS();
 
             //TabPane Processador
 
-                   //lbl_arqui_CPU.Text = "Arquitetura: " + Info_Processador.getArqui_CPU();
-                    lbl_Fabri_CPU.Text = "Fabricante: " + Info_Processador.getFabri_CPU();
-                    lbl_CPU_view_TabProc.Text = "Processador: " + Info_Processador.getNome_CPU();
-                   //lbl_tensao_CPU.Text = "Tensão: " + Info_Processador.getVolt_CPU();
-                    lbl_speedMaxClock_CPU.Text = "Velocidade Máxima do Clock: " + Info_Processador.getMaxSpeedClock_CPU() + " GHz";
-                    lbl_speedNowClock_CPU.Text = "Velocidade Atual do Clock: " + Info_Processador.getAtualSpeedClock_CPU() + " GHz";
-                    lbl_Num_PL_CPU.Text = "Processadores Lógicos: " + Info_Processador.getNumberLP_CPU();
-                    lbl_numSerie_CPU.Text = "Número de Série: " + Info_Processador.getNumSerial_CPU();
-                    lbl_l2Cache_CPU.Text = "Cache L2: " + Info_Processador.getCacheSizeL2_CPU() + " MB";
-                    lbl_l3Cache_CPU.Text = "Cache L3: " + Info_Processador.getCacheSizeL3_CPU() + " MB";
+            //lbl_arqui_CPU.Text = "Arquitetura: " + Info_Processador.getArqui_CPU();
+            lbl_Fabri_CPU.Text = "Fabricante: " + Info_Processador.getFabri_CPU();
+            lbl_CPU_view_TabProc.Text = "Processador: " + Info_Processador.getNome_CPU();
+            //lbl_tensao_CPU.Text = "Tensão: " + Info_Processador.getVolt_CPU();
+            lbl_speedMaxClock_CPU.Text = "Velocidade Máxima do Clock: " + Info_Processador.getMaxSpeedClock_CPU() + " GHz";
+            lbl_speedNowClock_CPU.Text = "Velocidade Atual do Clock: " + Info_Processador.getAtualSpeedClock_CPU() + " GHz";
+            lbl_Num_PL_CPU.Text = "Processadores Lógicos: " + Info_Processador.getNumberLP_CPU();
+            lbl_numSerie_CPU.Text = "Número de Série: " + Info_Processador.getNumSerial_CPU();
+            lbl_l2Cache_CPU.Text = "Cache L2: " + Info_Processador.getCacheSizeL2_CPU() + " MB";
+            lbl_l3Cache_CPU.Text = "Cache L3: " + Info_Processador.getCacheSizeL3_CPU() + " MB";
 
-                    lbl_NomePC_SO.Text = "Nome do Computador: " + Info_SO.getNome_PC();
-                    lbl_NomeSO_SO.Text = "Nome do SO: " + Info_SO.getNome_SO();
-                    //lbl_ID_SO.Text = "ID do Produto: " + Info_SO.getID_produto_SO();
-                    lbl_VersaoSO_SO.Text = "Versão do SO: " + Info_SO.getVersao_SO();
+            //TabPane Placa Mãe & SO
+
+
+            lbl_MB_modelo.Text = "Modelo: " + Info_PlacaMae.getModelo_MB();
+            lbl_MB_fabricante.Text = "Fabricante: " + Info_PlacaMae.getFabricante_MB();
+            lbl_MB_numSerie.Text = "Número de Série: " + Info_PlacaMae.getSerialNum_MB();
+
+            lbl_MB_fornBIOS.Text = "Fornecedor da BIOS: " + Info_BIOS.getFornecedorBIOS();
+            lbl_MB_nomeBIOS.Text = "Nome da BIOS: " + Info_BIOS.getNomeBIOS();
+            lbl_MB_verBIOS.Text = "Versão da BIOS: " + Info_BIOS.getVersaoBIOS();
+            lbl_MB_dtBIOS.Text = "Data da BIOS: " + Info_BIOS.getDataBIOS();
+
+            lbl_NomePC_SO.Text = "Nome do Computador: " + Info_SO.getNome_PC();
+            lbl_NomeSO_SO.Text = "Nome do SO: " + Info_SO.getNome_SO();
+            //lbl_ID_SO.Text = "ID do Produto: " + Info_SO.getID_produto_SO();
+            lbl_VersaoSO_SO.Text = "Versão do SO: " + Info_SO.getVersao_SO();
+
             
-        
+                  
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -142,6 +142,6 @@ namespace WindowsFormsApplication1
                     metroProgressSpinner_HD.Style = MetroFramework.MetroColorStyle.Red;
                 }   
             }
-        }       
+        }                 
     }
 }
